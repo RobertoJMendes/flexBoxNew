@@ -1,0 +1,74 @@
+.container {
+    background-color: #eee;
+    border: 2px solid red;
+    padding: 15px;
+    max-width: 300px;
+    height: 200px;
+    display: flex; /* propriedade que "inicia" o flexbox em um container */
+    /* alinhamento horizontal - row */
+    justify-content: space-around; /* center/space-around/space-between/space-evenly */
+    /* alinhamento vertical - collums */
+    align-items: center;
+    flex-wrap: wrap; /* quebra de linha */
+    
+}
+.item {
+    background-color: gray;
+    border: 2px solid blue;
+    color: yellow;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+
+}
+.box {
+    background-color: gray;
+    border: 2px solid blue;
+    color: yellow;
+    height: 50px;
+    flex-basis: 30px; /* faz com q tenha um tamanho inicial na largura */
+}
+#item1 {
+    flex-grow: 2; /* o item aumenta de tamanho de forma proporcinal os outros */
+/*    flex-shrink: 2; */    /* este item no momento não esta realizando nenhuma ação no codigo
+    mas ele serve de forma reversa ao grow, ou seja, o elemento diminui de forma proporcional */
+}
+#item2,
+#item3 {
+    flex-grow: 1;
+}
+#item2 {
+    flex-basis: 100px; /* apartir desse momento o basis ganha prioridade em relação ao grow, e o elemento tenta manter o tamanho inicial, mesmo com a responsividade */
+}
+
+.caixa {
+    display: flex;
+    background-color: gray;
+    border: 2px solid blue;
+    color: pink;
+    height: 50px;
+    /* shorthand é a "soma" de grow + shrink + basis, ele é aplicado da seguinte forma */
+    flex: 1 1 50px;
+    justify-content: space-between;
+}
+#item-6 {
+    order: 1;
+}
+#item-5 {
+    order: 3;
+}
+#item-4 {
+    order: 2;
+}
+#item-3 {
+    order: 6;
+}
+#item-2 {
+    order: 4;
+}
+#item-1 {
+    order: 5;
+}
+/* */
